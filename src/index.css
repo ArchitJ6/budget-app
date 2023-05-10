@@ -1,0 +1,50 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+.alert select#Currency {
+  appearance: none;
+  /* padding: 10px; */
+  outline: none;
+  font-size: 16px;
+  border: none;
+  width: 60px;
+  position: relative;
+  background-color: #93e499;
+  color: #fff;
+}
+
+/* Show selected option in parentheses for ID "Currency" */
+#Currency.custom-select::after {
+  content: attr(data-value);
+  margin-left: 5px;
+}
+#Currency option {
+  position: absolute;
+  transform: translateY(50px);
+  width: 100%;
+}
+/* Style the arrow icon for ID "Currency" */
+#Currency::after {
+  content: "\25BC"; /* Down arrow icon */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #fff; /* Apply color to the arrow icon */
+}
+
+/* Style the selected option for ID "Currency" */
+#Currency option:checked {
+  font-weight: bold;
+}
